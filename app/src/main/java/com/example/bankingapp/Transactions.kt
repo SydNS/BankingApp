@@ -1,5 +1,7 @@
 package com.example.bankingapp
 
-class Transactions {
+import androidx.fragment.app.Fragment
+
+class Transactions: Fragment() {
 
 }
