@@ -1,5 +1,6 @@
 package com.example.bankingapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -14,11 +15,12 @@ class MainActivity : AppCompatActivity() {
             when (it.id) {
                 R.id.menu_home -> {
                     Toast.makeText(this,"herte",Toast.LENGTH_SHORT).show()
-                    true
+                    startActivity(Intent(this,MainActivity2::class.java))
+
                 }
                 R.id.menu_notification -> {
                     Toast.makeText(this,"herte",Toast.LENGTH_SHORT).show()
-                    true
+
                 }
                 else -> false
             }
