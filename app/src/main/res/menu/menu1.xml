@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:title="Home"
+        android:icon="@android:drawable/ic_popup_reminder"
+
+        />
+
+    <item
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:id="@+id/menu_notification"
+        android:title="Transactions" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:title="Profile"
+        android:icon="@android:drawable/btn_dialog"/>
+
+</menu>
