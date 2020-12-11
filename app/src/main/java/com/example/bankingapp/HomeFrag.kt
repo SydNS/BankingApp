@@ -26,7 +26,7 @@ class HomeFrag : Fragment() {
         // Inflate the layout for this fragment
         val v:View = inflater.inflate(R.layout.fragment_home, container, false)
         val tv:TextView=v.findViewById(R.id.tvResult5)
-        tv.text
+        tv.text="tftyjvytg"
         return v
 
 
