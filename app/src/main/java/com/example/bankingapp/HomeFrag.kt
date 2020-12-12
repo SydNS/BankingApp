@@ -14,11 +14,7 @@ import androidx.annotation.Nullable
  * create an instance of this fragment.
  */
 class HomeFrag : Fragment() {
-
-
-
     override fun onCreateView(
-
         inflater: LayoutInflater,
         @Nullable container: ViewGroup?,
         @Nullable savedInstanceState: Bundle?
