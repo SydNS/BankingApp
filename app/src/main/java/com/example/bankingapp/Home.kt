@@ -1,6 +1,5 @@
 package com.example.bankingapp
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -28,7 +27,7 @@ class Home : AppCompatActivity() {
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Transactions())
                         .commit()
                 }
-                R.id.menu_notification->Toast.makeText(this,"menu_noti",Toast.LENGTH_SHORT).show()
+                R.id.transactions->Toast.makeText(this,"menu_noti",Toast.LENGTH_SHORT).show()
 
             }
             true

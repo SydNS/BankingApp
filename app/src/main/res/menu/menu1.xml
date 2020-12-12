@@ -10,7 +10,7 @@
 
     <item
         android:icon="@android:drawable/ic_menu_info_details"
-        android:id="@+id/menu_notification"
+        android:id="@+id/transactions"
         android:title="Transactions" />
 
     <item
