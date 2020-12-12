@@ -16,19 +16,20 @@ class Home : AppCompatActivity() {
         bottomnav.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.menu_home -> {
-                    Toast.makeText(this, "aysy", Toast.LENGTH_SHORT).show()
-
+//                    Toast.makeText(this, "aysy", Toast.LENGTH_SHORT).show()
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container, HomeFrag())
                         .commit()
                 }
                 R.id.menu_profile ->{
-                    Toast.makeText(this, "Transactions", Toast.LENGTH_SHORT).show()
-
+//                    Toast.makeText(this, "Transactions", Toast.LENGTH_SHORT).show()
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Transactions())
                         .commit()
                 }
-                R.id.transactions->Toast.makeText(this,"menu_noti",Toast.LENGTH_SHORT).show()
-
+                R.id.transactions->{
+//                    Toast.makeText(this, "Transactions", Toast.LENGTH_SHORT).show()
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, AccountInfo())
+                        .commit()
+                }
             }
             true
         }
