@@ -16,7 +16,7 @@ class Transactions: Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val v: View = inflater.inflate(R.layout.transactions, container, false)
-        val tv: TextView =v.findViewById(R.id.tvResult5)
+        val tv: TextView =v.findViewById(R.id.transactdets)
         tv.text="tftyjvytg"
 
         return v

@@ -25,7 +25,7 @@ class Home : AppCompatActivity() {
                 R.id.menu_profile ->{
                     Toast.makeText(this, "Transactions", Toast.LENGTH_SHORT).show()
 
-                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, HomeFrag())
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Transactions())
                         .commit()
                 }
                 R.id.menu_notification->Toast.makeText(this,"menu_noti",Toast.LENGTH_SHORT).show()
