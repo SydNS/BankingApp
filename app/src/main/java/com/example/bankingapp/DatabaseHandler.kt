@@ -12,6 +12,7 @@ val TABLENAME = "Users"
 val COL_ACCOUNTBALANCE = "Deposit"
 val COL_TRANSACTION_TYPE = "TransactionType"
 val COL_WITHDRAW = "withdrawn"
+val COL_WITHDRAW_CHARGES = "withdraw_CHARGES"
 val COL_ID = "id"
 
 class DataBaseHandler(var context: Context) : SQLiteOpenHelper(
@@ -20,7 +21,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(
 ) {
     override fun onCreate(db: SQLiteDatabase?) {
         val createTable =
-            "CREATE TABLE $TABLENAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_ACCOUNTBALANCE INTEGER,$COL_WITHDRAW INTEGER,$COL_TRANSACTION_TYPE STRING)"
+            "CREATE TABLE $TABLENAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_ACCOUNTBALANCE INTEGER,$COL_WITHDRAW INTEGER,$COL_TRANSACTION_TYPE STRING,$COL_WITHDRAW_CHARGES INTEGER)"
         db?.execSQL(createTable)
     }
 
@@ -34,6 +35,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(
         contentValues.put(COL_ACCOUNTBALANCE, user.deposit)
         contentValues.put(COL_WITHDRAW, user.withdraw)
         contentValues.put(COL_TRANSACTION_TYPE, user.transactionType)
+        contentValues.put(COL_WITHDRAW_CHARGES, user.withdraw_charges)
         val result = database.insert(TABLENAME, null, contentValues)
         if (result == (0).toLong()) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
@@ -53,7 +55,8 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(
                 val deposit = result.getString(result.getColumnIndex(COL_ACCOUNTBALANCE)).toInt()
                 val withdraw = result.getString(result.getColumnIndex(COL_WITHDRAW)).toInt()
                 val transactiontype = result.getString(result.getColumnIndex(COL_TRANSACTION_TYPE))
-                var user = User(withdraw, deposit,transactiontype)
+                val withdraw_charges = result.getString(result.getColumnIndex(COL_WITHDRAW_CHARGES)).toInt()
+                var user = User(withdraw, deposit,transactiontype,withdraw_charges)
                 list.add(user)
             } while (result.moveToNext())
         }
@@ -69,7 +72,9 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(
             val deposit = result.getString(result.getColumnIndex(COL_ACCOUNTBALANCE)).toInt()
             val withdraw = result.getString(result.getColumnIndex(COL_WITHDRAW)).toInt()
             val transactiontype = result.getString(result.getColumnIndex(COL_TRANSACTION_TYPE))
-            var user = User(withdraw, deposit,transactiontype)
+            val withdraw_charges = result.getString(result.getColumnIndex(COL_WITHDRAW_CHARGES)).toInt()
+
+            var user = User(withdraw, deposit,transactiontype,withdraw_charges)
             list.add(user)
         }
         return list

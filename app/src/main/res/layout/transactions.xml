@@ -1,137 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_marginTop="20dp"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:text="@string/account_balance"
-            android:layout_marginTop="30dp"
-            android:id="@+id/accountbalance"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:textStyle="normal" />
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:layout_margin="10dp"/>
 
-        <TextView
-            android:hint="@string/_0"
-            android:gravity="center"
-            android:id="@+id/tvdataOnresume"
-            android:layout_toRightOf="@id/accountbalance"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="20dp"
-            android:padding="8dp"
-            android:textSize="20sp"
-            android:textStyle="italic"
-            android:layout_toEndOf="@id/accountbalance"
-            android:layout_marginStart="20dp" />
-        <LinearLayout
-            android:id="@+id/inputhere"
-            android:layout_below="@id/accountbalance"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <EditText
-                android:id="@+id/amount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="8dp"
-                android:inputType="number"
-                android:hint="@string/enter_amount"
-                android:textColorHint="@android:color/darker_gray"
-                android:importantForAutofill="no" />
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/withdepo"
-            android:layout_below="@id/inputhere"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/btnRead"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:padding="8dp"
-                android:text="@string/details"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:id="@+id/btnDeposit"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:padding="8dp"
-                android:text="@string/deposit"
-                tools:ignore="ButtonStyle" />
-        </LinearLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollingCache="true">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    tools:ignore="UselessParent">
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="3dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/today" />
-
-                    <include layout="@layout/rowlayout"
-                        android:id="@+id/details"/>
-
-                </LinearLayout>
-            </LinearLayout>
-
-        </androidx.core.widget.NestedScrollView>
-
-    </RelativeLayout>
-
-
-</LinearLayout>
-
-
-
-
+</RelativeLayout>

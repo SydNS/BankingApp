@@ -1,3 +1,3 @@
 package com.example.bankingapp
 
-data class User(var withdraw: Int, var deposit: Int, var transactionType: String)
+data class User(var withdraw: Int, var deposit: Int, var transactionType: String, var withdraw_charges: Int)
