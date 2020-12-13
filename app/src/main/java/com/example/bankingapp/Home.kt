@@ -57,7 +57,7 @@ class Home : AppCompatActivity() {
                 editor.apply()
 
                 // start Onboard activity
-                val user = User(0, 0)
+                val user = User(0, 0,"Initial Balance")
                 //adding the new balance to the db
                 db.insertData(user)
                 supportFragmentManager.beginTransaction().replace(R.id.fragment_container, HomeFrag())

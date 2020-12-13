@@ -7,13 +7,104 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:text="Account Balance:"
         android:layout_marginTop="30dp"
-        android:id="@+id/tvResult5"
-        android:layout_centerHorizontal="true"
-        android:layout_width="350dp"
+        android:id="@+id/accountbalance"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:hint="0"
+        android:gravity="center"
+        android:id="@+id/tvdataOnresume"
+        android:layout_toRightOf="@id/accountbalance"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/inputhere"
+            android:layout_below="@id/accountbalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/editTextDeposit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="8dp"
+                android:inputType="number"
+                android:hint="Enter Amount To Deposit"
+                android:textColorHint="@android:color/darker_gray"/>
+
+            <EditText
+                android:id="@+id/editTextWithdraw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:autofillHints="Age"
+                android:inputType="number"
+                android:hint="Enter Amount To Withdraw"
+                android:textColorHint="@android:color/darker_gray"
+                android:padding="8dp"
+                android:textColor="@android:color/background_dark" />
+
+            <Button
+                android:id="@+id/btnWithdraw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="8dp"
+                android:text="Add data" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/withdepo"
+            android:layout_below="@id/inputhere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <Button
+                android:id="@+id/btnRead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Details" />
+
+            <Button
+                android:id="@+id/btnDeposit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Deposit" />
+        </LinearLayout>
+        <ScrollView
+            android:layout_below="@+id/withdepo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </ScrollView>
+
+
 </RelativeLayout>
+

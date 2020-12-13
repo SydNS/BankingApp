@@ -14,8 +14,9 @@ class AccountInfo : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val v:View = inflater.inflate(R.layout.fragment_accountinfo, container, false)
-        val tv: TextView =v.findViewById(R.id.tvResult5)
-        tv.text="tftyjvytg"
+
+
+
         return v
     }
 
