@@ -18,8 +18,8 @@ class Transactions : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val v: View = inflater.inflate(R.layout.transactions, container, false)
-        //getting recyclerview from xml
-        //getting recyclerview from xml
+
+        (requireActivity() as Home).title = "DH Bank Transactions"
         val recyclerView = v.findViewById(R.id.recyclerView) as RecyclerView
 
         //adding a layoutmanager

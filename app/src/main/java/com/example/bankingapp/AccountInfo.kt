@@ -15,6 +15,8 @@ class AccountInfo : Fragment() {
     ): View {
         val v: View = inflater.inflate(R.layout.fragment_accountinfo, container, false)
 
+        (requireActivity() as Home).title = "DH Bank  Profile"
+
         val currentbal = v.findViewById(R.id.currentbalance) as TextView
 
         val context = activity

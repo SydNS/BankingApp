@@ -24,6 +24,10 @@ class HomeFrag : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         val v: View = inflater.inflate(R.layout.fragment_home, container, false)
+
+        (requireActivity() as Home).title = "DH Bank Home"
+
+
         val tv: TextView = v.findViewById(R.id.tvdataOnresume)
 
         val context = activity
