@@ -44,9 +44,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/purple_700"
                 app:cardCornerRadius="6dp"
-                app:cardElevation="2dp"
+                app:cardElevation="5dp"
                 app:cardUseCompatPadding="true">
 
                 <LinearLayout
@@ -57,12 +57,15 @@
                     android:padding="15dp">
 
                     <TextView
+                        android:textColor="@color/white"
+                        android:id="@+id/currentbalance"
                         android:textSize="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/amount1" />
 
                     <TextView
+                        android:textColor="@color/white"
                         android:textSize="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -178,12 +181,13 @@
             android:paddingRight="5dp">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
-                android:text="GENERAL INFORMATION" />
+                android:text="PERSONAL INFORMATION" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -193,6 +197,7 @@
                 app:cardUseCompatPadding="true">
 
                 <LinearLayout
+                    android:background="@color/purple_500"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -206,12 +211,13 @@
                         android:paddingRight="15dp">
 
                         <ImageButton
-                            android:layout_width="50dp"
+                            android:layout_width="40dp"
                             android:layout_height="50dp"
                             android:background="@color/white"
                             android:src="@drawable/ic_baseline_email_24" />
 
                         <TextView
+                            android:textColor="@color/white"
                             android:layout_width="275dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -237,12 +243,13 @@
                         android:paddingRight="15dp">
 
                         <ImageButton
-                            android:layout_width="50dp"
+                            android:layout_width="40dp"
                             android:layout_height="50dp"
                             android:background="@color/white"
                             android:src="@drawable/ic_baseline_perm_identity_24" />
 
                         <TextView
+                            android:textColor="@color/white"
                             android:layout_width="275dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -268,12 +275,13 @@
                         android:paddingRight="15dp">
 
                         <ImageButton
-                            android:layout_width="50dp"
+                            android:layout_width="40dp"
                             android:layout_height="50dp"
                             android:background="@color/white"
                             android:src="@drawable/ic_baseline_school_24" />
 
                         <TextView
+                            android:textColor="@color/white"
                             android:layout_width="275dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -298,12 +306,13 @@
                         android:paddingRight="15dp">
 
                         <ImageButton
-                            android:layout_width="50dp"
+                            android:layout_width="40dp"
                             android:layout_height="50dp"
                             android:background="@color/white"
                             android:src="@drawable/ic_baseline_contact_phone_24" />
 
                         <TextView
+                            android:textColor="@color/white"
                             android:layout_width="180dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -314,10 +323,7 @@
 
                     </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@android:color/darker_gray" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

@@ -19,6 +19,7 @@ class Transactions : Fragment() {
         // Inflate the layout for this fragment
         val v: View = inflater.inflate(R.layout.transactions, container, false)
         //getting recyclerview from xml
+        //getting recyclerview from xml
         val recyclerView = v.findViewById(R.id.recyclerView) as RecyclerView
 
         //adding a layoutmanager
@@ -37,10 +38,16 @@ class Transactions : Fragment() {
                 User(
                     data[i].withdraw,
                     data[i].deposit,
-                    data[i].transactionType.toString()
+                    data[i].transactionType.toString(),
+                    data[i].withdraw_charges
                 )
             )
         }
+        //creating our adapter
+        val adapter = CustomAdapter(transactionsmade)
+
+        //now adding the adapter to recyclerview
+        recyclerView.adapter = adapter
         return v
 
 

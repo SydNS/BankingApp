@@ -12,12 +12,21 @@ class AccountInfo : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val v:View = inflater.inflate(R.layout.fragment_accountinfo, container, false)
+    ): View {
+        val v: View = inflater.inflate(R.layout.fragment_accountinfo, container, false)
 
+        val currentbal = v.findViewById(R.id.currentbalance) as TextView
 
+        val context = activity
+        val db = context?.let { DataBaseHandler(it) }
+        val dataOnresume = db?.lastItem()
+        if (!dataOnresume.isNullOrEmpty()) {
+            val lastBalance = dataOnresume[0].deposit.toString()
+            currentbal.text = lastBalance
+        }
 
         return v
-    }
 
+
+    }
 }

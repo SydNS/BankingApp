@@ -55,8 +55,9 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(
                 val deposit = result.getString(result.getColumnIndex(COL_ACCOUNTBALANCE)).toInt()
                 val withdraw = result.getString(result.getColumnIndex(COL_WITHDRAW)).toInt()
                 val transactiontype = result.getString(result.getColumnIndex(COL_TRANSACTION_TYPE))
-                val withdraw_charges = result.getString(result.getColumnIndex(COL_WITHDRAW_CHARGES)).toInt()
-                var user = User(withdraw, deposit,transactiontype,withdraw_charges)
+                val withdraw_charges =
+                    result.getString(result.getColumnIndex(COL_WITHDRAW_CHARGES)).toInt()
+                var user = User(withdraw, deposit, transactiontype, withdraw_charges)
                 list.add(user)
             } while (result.moveToNext())
         }
@@ -72,13 +73,31 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(
             val deposit = result.getString(result.getColumnIndex(COL_ACCOUNTBALANCE)).toInt()
             val withdraw = result.getString(result.getColumnIndex(COL_WITHDRAW)).toInt()
             val transactiontype = result.getString(result.getColumnIndex(COL_TRANSACTION_TYPE))
-            val withdraw_charges = result.getString(result.getColumnIndex(COL_WITHDRAW_CHARGES)).toInt()
+            val withdraw_charges =
+                result.getString(result.getColumnIndex(COL_WITHDRAW_CHARGES)).toInt()
 
-            var user = User(withdraw, deposit,transactiontype,withdraw_charges)
+            var user = User(withdraw, deposit, transactiontype, withdraw_charges)
             list.add(user)
         }
         return list
     }
+
+
+//    fun sumDeposits() {
+//
+//        val db = this.readableDatabase
+//        val num = 0
+//        val query =
+//            "Select SUM($COL_TRANSACTION_TYPE) from $TABLENAME WHERE $COL_TRANSACTION_TYPE LIKE '%deposit%'"
+//
+//        val result = db.rawQuery(query, null)
+//        if (result.moveToFirst()) {
+//
+//            var total = result.getInt(result.getColumnIndex("Total"));// get final total
+//            return total
+//
+//        }
+//    }
 
 
 }

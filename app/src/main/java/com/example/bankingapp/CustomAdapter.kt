@@ -31,11 +31,14 @@ class CustomAdapter(val userList: ArrayList<User>) : RecyclerView.Adapter<Custom
 
         fun bindItems(user: User) {
             val typeOfTransaction = itemView.findViewById(R.id.typeOfTransaction) as TextView
-            val transactionId  = itemView.findViewById(R.id.transactionId) as TextView
+            val amountOfMoneyCharged  = itemView.findViewById(R.id.amountOfMoneyCharged) as TextView
             val amountOfMoney  = itemView.findViewById(R.id.amountOfMoney) as TextView
-            typeOfTransaction.text = user.withdraw.toString()
-            transactionId.text = user.deposit.toString()
-            amountOfMoney.text = user.transactionType.toString()
+            val amountBalance  = itemView.findViewById(R.id.amountBalance) as TextView
+
+            typeOfTransaction.text = user.transactionType.toString()
+            amountOfMoneyCharged.text = user.withdraw_charges.toString()
+            amountOfMoney.text = user.withdraw.toString()
+            amountBalance.text = user.deposit.toString()
         }
     }
 }

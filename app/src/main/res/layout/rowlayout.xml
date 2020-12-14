@@ -1,50 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView android:layout_width="match_parent"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="6dp"
-    app:cardElevation="4dp"
-    app:cardUseCompatPadding="true"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
 
     <RelativeLayout
-        android:layout_width="392dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="15dp">
 
         <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type of Transaction : " />
+
+        <TextView
             android:id="@+id/typeOfTransaction"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_below="@id/transactionId"
-            android:layout_marginLeft="40dp"
-            android:layout_toRightOf="@id/amountOfMoney"
-            android:text="Withdraw"
-            android:textColor="@color/black"
-            android:textSize="17dp" />
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/type"
+            android:layout_toRightOf="@id/type"
+            android:text="WithDrawal" />
 
 
         <TextView
-            android:id="@+id/transactionId"
+            android:id="@+id/textAmount"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_toRightOf="@id/typeOfTransaction"
-            android:text="1"
-            android:textColor="@color/black" />
+            android:layout_height="wrap_content"
+            android:layout_below="@id/type"
+            android:layout_marginTop="5dp"
+            android:text="Amount Transacted : " />
 
         <TextView
             android:id="@+id/amountOfMoney"
             android:layout_width="wrap_content"
-            android:layout_height="31dp"
-            android:layout_below="@id/transactionId"
-            android:layout_marginLeft="40dp"
-            android:text="4.38 USD"
-            android:textColor="@color/black" />
+            android:layout_height="wrap_content"
+            android:layout_below="@id/typeOfTransaction"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/textAmount"
+            android:layout_toRightOf="@id/textAmount"
+            android:text="Amount" />
 
+
+        <TextView
+
+            android:id="@+id/withdrawcharges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textAmount"
+            android:layout_marginTop="5dp"
+            android:text="Transaction Charges :  " />
+
+        <TextView
+            android:id="@+id/amountOfMoneyCharged"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/amountOfMoney"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/textAmount"
+            android:layout_toRightOf="@id/textAmount"
+            android:text=" Charges" />
+
+
+
+        <TextView
+
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/withdrawcharges"
+            android:layout_marginTop="5dp"
+            android:text="Account Balance :  " />
+
+        <TextView
+            android:id="@+id/amountBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/amountOfMoneyCharged"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/textAmount"
+            android:layout_toRightOf="@id/textAmount"
+            android:text=" Blance" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
