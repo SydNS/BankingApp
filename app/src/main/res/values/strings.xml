@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">BankingApp</string>
+    <string name="app_name">NtegeHamza Banking App</string>
     <string name="enter_amount">Enter Amount</string>
     <string name="account_balance">Account Balance:</string>
     <string name="_0">0</string>
     <string name="details">Details</string>
     <string name="deposit">Deposit</string>
     <string name="today">Today</string>
-    <string name="accname">AIDAH NABUKENYA</string>
+    <string name="accname">Ntege Hamza </string>
     <string name="amount1">120.000 USD</string>
     <string name="my_wallet">My Wallet</string>
     <!-- TODO: Remove or change this placeholder text -->

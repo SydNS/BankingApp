@@ -4,18 +4,18 @@
     <item
         android:id="@+id/menu_home"
         android:title="Home"
-        android:icon="@android:drawable/ic_popup_reminder"
+        android:icon="@drawable/ic_baseline_home_24"
 
         />
 
     <item
-        android:icon="@android:drawable/ic_menu_info_details"
+        android:icon="@android:drawable/ic_popup_reminder"
         android:id="@+id/transactions"
         android:title="Transactions" />
 
     <item
         android:id="@+id/menu_profile"
         android:title="Profile"
-        android:icon="@android:drawable/btn_dialog"/>
+        android:icon="@drawable/ic_baseline_person_24"/>
 
 </menu>
